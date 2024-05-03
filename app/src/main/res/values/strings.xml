@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AboutMe</string>
+    <string name="name">User Name</string>
+    <string name="yellow_star">Yellow Star</string>
+    <string name="some_long_text">Lorem ipsum dolor sit amet. Est facilis quos ea laudantium laborum in tempora consequatur. Et voluptatem galisum qui libero explicabo in amet dolores eum blanditiis quibusdam cum consequatur laudantium.</string>
+    <string name="what_is_your_nickname">What is your Nick Name?</string>
+</resources>
