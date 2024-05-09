@@ -18,11 +18,14 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    private val myName: MyName = MyName("Aleks Haecky")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 //        setContentView(R.layout.activity_main)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        binding.myName = myName
 
 //        findViewById<Button>(R.id.done_button).setOnClickListener {
 //            addNickname(it)
@@ -42,11 +45,13 @@ class MainActivity : AppCompatActivity() {
 //        nicknameTextView.visibility = View.VISIBLE
 
         binding.apply {
-            niknameText.text = binding.nicknameEdit.text
+//            niknameText.text = binding.nicknameEdit.text
+            myName?.nickname = nicknameEdit.text.toString()
             invalidateAll()
             nicknameEdit.visibility = View.GONE
             doneButton.visibility = View.GONE
-            niknameText.visibility = View.VISIBLE
+// Make the TexView with the nickname visible.
+            nicknameText.visibility = View.VISIBLE
         }
 
         // Hide the keyboard.
